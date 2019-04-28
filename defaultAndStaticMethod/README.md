@@ -5,14 +5,17 @@
     Java 8 uses default and static methods heavily in Collection API and default methods are added so that our code remains backward compatible.
 
 **Overriding Methods on "Object" class methods:**
-
-    Its not possible for an interface to provide default implementations for the methods in Object. Trying to do so will result in a compile error.
-    If any clas in the hierarchy has a method with same signature as Object class methods, then default method became irrelevant. Since any class implementing 
-    an interface already has Object as superclass, if we have equlas(), hashCode() default methods in interface, it will become irrelevent. That's why for 
-    better clarity, interfaces are not allowed to have Object class default methods.
-    
+```
+    * Its not possible for an interface to provide default implementations for the methods in Object. 
+      Trying to do so will result in a compile error.
+    * If any clas in the hierarchy has a method with same signature as Object class methods, then default
+      method became irrelevant. Since any class implementing an interface already has Object as superclass,
+      if we have equlas(), hashCode() default methods in interface, it will become irrelevent. That's why
+      for better clarity, interfaces are not allowed to have Object class default methods.
+```  
  
 **Key point about static and default methods**
+```
     1. Default methods enable us to add new functionality to the interfaces of ours liberaries and ensure binary compatibility with code 
        Written for older versions of those interfaces.
     2. Interface default method helps in extending inerfaces without having the fear of breaking implementation classes.
@@ -23,6 +26,7 @@
     5. Both implemented class and interface can have static methods with same name, and neither overriding other.
     6. Remember in case a class is implementing more than one interfcaes with same default method signature then the implemented class 
        needs to override the default method.
+```
  
  
 **MyInterface.java**    
