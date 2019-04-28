@@ -1,10 +1,10 @@
-#Default and static methods in Interfaces
+****Default and static methods in Interfaces****
 
     From Java 8, interfcaes are enhanced to have method with implementation. We can use default and static keyword to create interfaces with method implementation
 
     Java 8 uses default and static methods heavily in Collection API and default methods are added so that our code remains backward compatible.
 
-####Overriding Methods on "Object" class methods:
+**Overriding Methods on "Object" class methods:**
 
     Its not possible for an interface to provide default implementations for the methods in Object. Trying to do so will result in a compile error.
     If any clas in the hierarchy has a method with same signature as Object class methods, then default method became irrelevant. Since any class implementing 
@@ -12,20 +12,20 @@
     better clarity, interfaces are not allowed to have Object class default methods.
     
  
-###Key point about static and default methods
+**Key point about static and default methods**
     1. Default methods enable us to add new functionality to the interfaces of ours liberaries and ensure binary compatibility with code 
        Written for older versions of those interfaces.
     2. Interface default method helps in extending inerfaces without having the fear of breaking implementation classes.
-            For Example: java.util.Comparator interface
+            For Example: **java.util.Comparator interface**
     3. Normally, static method in is used as Helper methods while default method are used as a default implementation for classes that implements that interface.
-            public static <K, V> Comparator<Map.Entry<K, V>> comparingByKey(Comparator<? super K> cmp)
+            **public static <K, V> Comparator<Map.Entry<K, V>> comparingByKey(Comparator<? super K> cmp)**
     4. default methods can be overriden in implementing class, while static can't.
     5. Both implemented class and interface can have static methods with same name, and neither overriding other.
     6. Remember in case a class is implementing more than one interfcaes with same default method signature then the implemented class 
        needs to override the default method.
  
  
-####MyInterface.java    
+**MyInterface.java**    
 ```$xslt
     package org.dev.tech.service;
     
@@ -62,7 +62,7 @@
 
 ```
  
-####MyInterfaceImpl.java
+**MyInterfaceImpl.java**
 ```$xslt
     package org.dev.tech.service.impl;
     
@@ -82,7 +82,7 @@
 
 ``` 
 
-####Student.java
+**Student.java**
 ```$xslt
 package org.dev.tech.model;
 
@@ -120,7 +120,7 @@ public class Student implements Comparable<Student> {
 
 
 ```
-####ClientTest1.java
+**ClientTest1.java**
 ```$xslt
 
 package org.dev.tech.client;
@@ -169,7 +169,7 @@ public class ClientTest1 {
 }
 
 ```
-####Output
+**Output**
 ```
 -------default method--------
 Student{name='Aditya', age=25}
@@ -183,9 +183,9 @@ Max Num9000
 
 ```
 
-#####In case a class is implementing more than one interfcaes with same default method signature then the implemented class needs to override the default method.
+**In case a class is implementing more than one interfcaes with same default method signature then the implemented class needs to override the default method.**
 
-####Interface1.java
+**Interface1.java**
 ```$xslt
 
 package org.dev.tech.service;
@@ -199,7 +199,7 @@ public interface Interface1 {
 
 ```
 
-####Interface2.java
+**Interface2.java**
 ```$xslt
 
 package org.dev.tech.service;
@@ -213,7 +213,7 @@ public interface Interface2 {
 
 ```
 
-####CommonClient.java
+**CommonClient.java**
 ```$xslt
 
 package org.dev.tech.service.impl;
@@ -239,7 +239,7 @@ public class CommonClient implements Interface1, Interface2 {
 ```
 
 
-####Output
+**Output**
 ```$xslt
 Interface1:display
 Interface2:display
