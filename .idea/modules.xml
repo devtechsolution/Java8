@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FunctinalInterfacWithLambda/FunctinalInterfacWithLambda.iml" filepath="$PROJECT_DIR$/FunctinalInterfacWithLambda/FunctinalInterfacWithLambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/defaultAndStaticMethod/defaultAndStaticMethod.iml" filepath="$PROJECT_DIR$/defaultAndStaticMethod/defaultAndStaticMethod.iml" />
       <module fileurl="file://$PROJECT_DIR$/java8.iml" filepath="$PROJECT_DIR$/java8.iml" />
     </modules>
